@@ -1,0 +1,8 @@
+import express from 'express'
+import {BACKEND_URL} from "@repo/common/config"
+const app = express()
+console.log(BACKEND_URL);
+app.get('/',(req,res)=>{
+    res.json({msg:'server is healthy'})
+})
+app.listen(4000)
